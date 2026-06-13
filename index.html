@@ -3,103 +3,401 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mening Portfoliom</title>
+    <title>Kamron — Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Iconlar uchun FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigatsiya paneli -->
+
+    <!-- ========== NAVBAR ========== -->
     <nav class="navbar">
-        <div class="logo">Port<b>folio.</b></div>
+        <div class="logo">
+            <span class="logo-bracket">&lt;</span>Kamron<span class="logo-bracket">/&gt;</span>
+        </div>
         <ul class="nav-links">
             <li><a href="#home">Asosiy</a></li>
-            <li><a href="#about">Men haqimda</a></li>
+            <li><a href="#about">Haqimda</a></li>
             <li><a href="#projects">Loyihalar</a></li>
-            <li><a href="#contact">Aloqa</a></li>
+            <li><a href="#family">Oilam</a></li>
+            <li><a href="#contact" class="nav-cta">Bog'lanish</a></li>
         </ul>
-        <button id="theme-toggle"><i class="fas fa-moon"></i></button>
     </nav>
 
-    <!-- Asosiy qism (Hero) -->
+    <!-- ========== HERO ========== -->
     <section id="home" class="hero-section">
-        <div class="hero-content">
-            <h3>Salom, Men</h3>
-            <h1>Abdujalilov Kamron</h1>
-            <h3>Va men <span class="typing">Dasturchiman</span></h3>
-            <p>Zamonaviy, tez va xavfsiz veb-saytlar hamda ilovalar yaratish bilan shug'ullanaman.</p>
-            <a href="#contact" class="btn">Men bilan bog'lanish</a>
+        <!-- Animatsion fon elementlari -->
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="grid-overlay"></div>
+
+        <div class="hero-inner">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                O'rganmoqdaman — HTML & CSS
+            </div>
+
+            <h1 class="hero-title">
+                Abdujalilov<br>
+                <span class="gradient-text">Kamron</span>
+            </h1>
+
+            <p class="hero-sub">
+                Veb-dasturlash dunyosiga qadam qo'ydim.<br>
+                Chiroyli sahifalar yaratishni sevaman.
+            </p>
+
+            <div class="hero-stats">
+                <div class="hstat">
+                    <strong>3</strong>
+                    <span>Oy</span>
+                </div>
+                <div class="hstat-divider"></div>
+                <div class="hstat">
+                    <strong>3+</strong>
+                    <span>Loyiha</span>
+                </div>
+                <div class="hstat-divider"></div>
+                <div class="hstat">
+                    <strong>∞</strong>
+                    <span>Ishtiyoq</span>
+                </div>
+            </div>
+
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-folder-open"></i> Loyihalar
+                </a>
+                <a href="#contact" class="btn btn-ghost">
+                    <i class="fas fa-paper-plane"></i> Bog'lanish
+                </a>
+            </div>
+        </div>
+
+        <!-- Dekorativ floating karta -->
+        <div class="hero-card">
+            <div class="hcard-icon"><i class="fab fa-html5"></i></div>
+            <div class="hcard-text">
+                <strong>HTML5</strong>
+                <span>Semantik markup</span>
+            </div>
+            <div class="hcard-bar">
+                <div class="hcard-fill" style="width: 75%"></div>
+            </div>
+
+            <div class="hcard-icon" style="margin-top:20px"><i class="fab fa-css3-alt"></i></div>
+            <div class="hcard-text">
+                <strong>CSS3</strong>
+                <span>Flexbox · Grid · Animatsiya</span>
+            </div>
+            <div class="hcard-bar">
+                <div class="hcard-fill css" style="width: 65%"></div>
+            </div>
+        </div>
+
+        <div class="scroll-hint">
+            <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
-    <!-- Men haqimda qismi -->
+    <!-- ========== ABOUT ========== -->
     <section id="about" class="about-section">
-        <h2 class="heading">Men <span>Haqimda</span></h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>Men Full-Stack dasturchiman. Doimo yangi texnologiyalarni o'rganishga va murakkab muammolarga optimal yechim topishga intilaman.</p>
-                <div class="skills">
-                    <span class="skill-badge">HTML5</span>
-                    <span class="skill-badge">CSS3</span>
-                    <span class="skill-badge">JavaScript</span>
-                    <span class="skill-badge">React</span>
-                    <span class="skill-badge">Node.js</span>
-                    <span class="skill-badge">Python</span>
+        <div class="section-label">02 — Men Haqimda</div>
+        <h2 class="section-title">Kim men <span class="gradient-text">?</span></h2>
+
+        <div class="about-grid">
+            <!-- Chap: Matn -->
+            <div class="about-left">
+                <p class="about-lead">
+                    Salom! Men <strong>Kamron</strong>, 3 oy oldin HTML va CSS o'rganishni boshladim.
+                </p>
+                <p class="about-body">
+                    Har kuni yangi narsalarni kashf qilaman — sahifalar tartibini, ranglarni,
+                    animatsiyalarni. Kelajakda professional veb-dasturchi bo'lishni orzu qilaman.
+                    Hozircha kichik loyihalar bilan mashq qilmoqdaman.
+                </p>
+
+                <div class="info-list">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>O'zbekiston</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>O'quvchi — IT yo'nalishi</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>3 oylik tajriba</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-target"></i>
+                        <span>Maqsad: Full-Stack dasturchi</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- O'ng: Ko'nikmalar -->
+            <div class="about-right">
+                <h3 class="skills-title">Bilimlarim</h3>
+
+                <div class="skill-row">
+                    <div class="skill-icon html5"><i class="fab fa-html5"></i></div>
+                    <div class="skill-details">
+                        <div class="skill-header">
+                            <span>HTML5</span>
+                            <span class="skill-pct">75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 75%; background: linear-gradient(90deg, #e34f26, #f06529);"></div>
+                        </div>
+                        <small>Semantika · Forma · Jadval · Media</small>
+                    </div>
+                </div>
+
+                <div class="skill-row">
+                    <div class="skill-icon css3"><i class="fab fa-css3-alt"></i></div>
+                    <div class="skill-details">
+                        <div class="skill-header">
+                            <span>CSS3</span>
+                            <span class="skill-pct">65%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 65%; background: linear-gradient(90deg, #1572b6, #33aadd);"></div>
+                        </div>
+                        <small>Flexbox · Grid · Animatsiya · Responsive</small>
+                    </div>
+                </div>
+
+                <div class="learning-soon">
+                    <i class="fas fa-road"></i>
+                    <div>
+                        <strong>O'rganish rejalangan:</strong>
+                        <span>JavaScript · React</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Loyihalar qismi -->
+    <!-- ========== PROJECTS ========== -->
     <section id="projects" class="projects-section">
-        <h2 class="heading">Mening <span>Loyihalarim</span></h2>
+        <div class="section-label">03 — Loyihalar</div>
+        <h2 class="section-title">Mening <span class="gradient-text">Ishlarim</span></h2>
+        <p class="section-desc">HTML va CSS yordamida yaratgan loyihalarim</p>
+
         <div class="projects-grid">
-            <!-- 1-Loyiha -->
-            <div class="project-card">
-                <i class="fas fa-shopping-cart project-icon"></i>
-                <h3>Online Do'kon</h3>
-                <p>Kiyim-kechaklar sotiladigan to'liq funksional internet do'kon veb-sayti.</p>
-                <a href="#" class="project-link">Ko'rish <i class="fas fa-external-link-alt"></i></a>
+
+            <div class="project-card" data-num="01">
+                <div class="pcard-top">
+                    <div class="pcard-icon"><i class="fas fa-user-circle"></i></div>
+                    <div class="pcard-links">
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <h3>Shaxsiy Portfolio</h3>
+                <p>HTML va CSS yordamida yaratgan birinchi shaxsiy portfolio sahifam.</p>
+                <div class="pcard-tags">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>Flexbox</span>
+                </div>
             </div>
-            <!-- 2-Loyiha -->
-            <div class="project-card">
-                <i class="fas fa-cloud-sun project-icon"></i>
-                <h3>Ob-havo Ilovasi</h3>
-                <p>API orqali dunyo shaharlarining ob-havosini ko'rsatuvchi ilova.</p>
-                <a href="#" class="project-link">Ko'rish <i class="fas fa-external-link-alt"></i></a>
+
+            <div class="project-card" data-num="02">
+                <div class="pcard-top">
+                    <div class="pcard-icon"><i class="fas fa-utensils"></i></div>
+                    <div class="pcard-links">
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <h3>Restoran Sahifasi</h3>
+                <p>Oddiy restoran uchun menyu, aloqa va lokatsiyani ko'rsatuvchi veb-sahifa.</p>
+                <div class="pcard-tags">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>Grid</span>
+                </div>
             </div>
-            <!-- 3-Loyiha -->
-            <div class="project-card">
-                <i class="fas fa-tasks project-icon"></i>
-                <h3>Task Manager</h3>
-                <p>Kunlik vazifalarni rejalashtirish va boshqarish uchun qulay platforma.</p>
-                <a href="#" class="project-link">Ko'rish <i class="fas fa-external-link-alt"></i></a>
+
+            <div class="project-card featured" data-num="03">
+                <div class="pcard-top">
+                    <div class="pcard-icon"><i class="fas fa-store"></i></div>
+                    <div class="pcard-links">
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="featured-tag">Asosiy</div>
+                <h3>Mahsulotlar Sahifasi</h3>
+                <p>Zamonaviy mahsulotlar ro'yxati sahifasi — CSS Grid va Flexbox bilan.</p>
+                <div class="pcard-tags">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>Responsive</span>
+                </div>
             </div>
+
         </div>
     </section>
 
-    <!-- Aloqa qismi -->
-    <section id="contact" class="contact-section">
-        <h2 class="heading">Men bilan <span>Bog'lanish</span></h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Ismingiz" required>
-            <input type="email" placeholder="Email manzilingiz" required>
-            <textarea placeholder="Xabaringiz..." rows="5" required></textarea>
-            <button type="submit" class="btn">Yuborish</button>
-        </form>
+    <!-- ========== OILAM ========== -->
+    <section id="family" class="family-section">
+        <div class="section-label">04 — Oilam</div>
+        <h2 class="section-title">Mening <span class="gradient-text">Oilam</span></h2>
+        <p class="section-desc">Mening kuchim, ilhomsim va tayanch nuqtam</p>
+
+        <div class="family-grid">
+
+            <div class="family-card">
+                <div class="family-photo-wrap">
+                    <img src="images/dadam.jpg" alt="Dadam"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="family-placeholder" style="display:none;">
+                        <i class="fas fa-user"></i>
+                        <span>Rasm qo'yiladi</span>
+                    </div>
+                    <div class="family-overlay">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                </div>
+                <div class="family-body">
+                    <span class="family-role-badge">
+                        <i class="fas fa-crown"></i> Dadam
+                    </span>
+                    <p>Oila boshlig'im va eng katta tayanch kuchim</p>
+                </div>
+            </div>
+
+            <div class="family-card">
+                <div class="family-photo-wrap">
+                    <img src="images/ayam.jpg" alt="Ayam"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="family-placeholder" style="display:none;">
+                        <i class="fas fa-user"></i>
+                        <span>Rasm qo'yiladi</span>
+                    </div>
+                    <div class="family-overlay">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                </div>
+                <div class="family-body">
+                    <span class="family-role-badge ayam">
+                        <i class="fas fa-heart"></i> Ayam
+                    </span>
+                    <p>Mehri bepayan, duosi doim birga</p>
+                </div>
+            </div>
+
+            <div class="family-card">
+                <div class="family-photo-wrap">
+                    <img src="images/akam.jpg" alt="Akam"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="family-placeholder" style="display:none;">
+                        <i class="fas fa-user"></i>
+                        <span>Rasm qo'yiladi</span>
+                    </div>
+                    <div class="family-overlay">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                </div>
+                <div class="family-body">
+                    <span class="family-role-badge akam">
+                        <i class="fas fa-shield-alt"></i> Akam
+                    </span>
+                    <p>Eng yaqin do'stim va maslahatgorim</p>
+                </div>
+            </div>
+
+            <div class="family-card">
+                <div class="family-photo-wrap">
+                    <img src="images/singlim.jpg" alt="Singlim"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="family-placeholder" style="display:none;">
+                        <i class="fas fa-user"></i>
+                        <span>Rasm qo'yiladi</span>
+                    </div>
+                    <div class="family-overlay">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                </div>
+                <div class="family-body">
+                    <span class="family-role-badge singlim">
+                        <i class="fas fa-star"></i> Singlim
+                    </span>
+                    <p>Quvvatim va hayotimdagi quyosh</p>
+                </div>
+            </div>
+
+        </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Portfolio. Barcha huquqlar himoyalangan.</p>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-telegram"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="contact-section">
+        <div class="section-label">05 — Aloqa</div>
+        <h2 class="section-title">Menga <span class="gradient-text">Yozing</span></h2>
+        <p class="section-desc">Har qanday savol yoki taklifingiz bo'lsa — murojaat qiling!</p>
+
+        <div class="contact-inner">
+            <div class="contact-info">
+                <div class="cinfo-item">
+                    <div class="cinfo-icon"><i class="fab fa-telegram"></i></div>
+                    <div>
+                        <strong>Telegram</strong>
+                        <span>@username</span>
+                    </div>
+                </div>
+                <div class="cinfo-item">
+                    <div class="cinfo-icon"><i class="fab fa-instagram"></i></div>
+                    <div>
+                        <strong>Instagram</strong>
+                        <span>@username</span>
+                    </div>
+                </div>
+                <div class="cinfo-item">
+                    <div class="cinfo-icon"><i class="fab fa-github"></i></div>
+                    <div>
+                        <strong>GitHub</strong>
+                        <span>@username</span>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form" action="mailto:your@email.com" method="get" enctype="text/plain">
+                <div class="form-group">
+                    <label>Ismingiz</label>
+                    <input type="text" name="ism" placeholder="Kamron Abdujalilov" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="email@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Xabar</label>
+                    <textarea name="xabar" placeholder="Salom, sizga bir savol bor..." rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    Yuborish <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <span class="logo-bracket">&lt;</span>Kamron<span class="logo-bracket">/&gt;</span>
+            </div>
+            <div class="social-row">
+                <a href="#" class="social-btn" title="Telegram"><i class="fab fa-telegram"></i></a>
+                <a href="#" class="social-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-btn" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Abdujalilov Kamron</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
