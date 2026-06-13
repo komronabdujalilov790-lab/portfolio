@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mening Portfoliom</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Iconlar uchun FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigatsiya paneli -->
+    <nav class="navbar">
+        <div class="logo">Port<b>folio.</b></div>
+        <ul class="nav-links">
+            <li><a href="#home">Asosiy</a></li>
+            <li><a href="#about">Men haqimda</a></li>
+            <li><a href="#projects">Loyihalar</a></li>
+            <li><a href="#contact">Aloqa</a></li>
+        </ul>
+        <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+    </nav>
+
+    <!-- Asosiy qism (Hero) -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h3>Salom, Men</h3>
+            <h1>Abdujalilov Kamron</h1>
+            <h3>Va men <span class="typing">Dasturchiman</span></h3>
+            <p>Zamonaviy, tez va xavfsiz veb-saytlar hamda ilovalar yaratish bilan shug'ullanaman.</p>
+            <a href="#contact" class="btn">Men bilan bog'lanish</a>
+        </div>
+    </section>
+
+    <!-- Men haqimda qismi -->
+    <section id="about" class="about-section">
+        <h2 class="heading">Men <span>Haqimda</span></h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Men Full-Stack dasturchiman. Doimo yangi texnologiyalarni o'rganishga va murakkab muammolarga optimal yechim topishga intilaman.</p>
+                <div class="skills">
+                    <span class="skill-badge">HTML5</span>
+                    <span class="skill-badge">CSS3</span>
+                    <span class="skill-badge">JavaScript</span>
+                    <span class="skill-badge">React</span>
+                    <span class="skill-badge">Node.js</span>
+                    <span class="skill-badge">Python</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loyihalar qismi -->
+    <section id="projects" class="projects-section">
+        <h2 class="heading">Mening <span>Loyihalarim</span></h2>
+        <div class="projects-grid">
+            <!-- 1-Loyiha -->
+            <div class="project-card">
+                <i class="fas fa-shopping-cart project-icon"></i>
+                <h3>Online Do'kon</h3>
+                <p>Kiyim-kechaklar sotiladigan to'liq funksional internet do'kon veb-sayti.</p>
+                <a href="#" class="project-link">Ko'rish <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <!-- 2-Loyiha -->
+            <div class="project-card">
+                <i class="fas fa-cloud-sun project-icon"></i>
+                <h3>Ob-havo Ilovasi</h3>
+                <p>API orqali dunyo shaharlarining ob-havosini ko'rsatuvchi ilova.</p>
+                <a href="#" class="project-link">Ko'rish <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <!-- 3-Loyiha -->
+            <div class="project-card">
+                <i class="fas fa-tasks project-icon"></i>
+                <h3>Task Manager</h3>
+                <p>Kunlik vazifalarni rejalashtirish va boshqarish uchun qulay platforma.</p>
+                <a href="#" class="project-link">Ko'rish <i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aloqa qismi -->
+    <section id="contact" class="contact-section">
+        <h2 class="heading">Men bilan <span>Bog'lanish</span></h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Ismingiz" required>
+            <input type="email" placeholder="Email manzilingiz" required>
+            <textarea placeholder="Xabaringiz..." rows="5" required></textarea>
+            <button type="submit" class="btn">Yuborish</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Portfolio. Barcha huquqlar himoyalangan.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
