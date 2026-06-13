@@ -338,15 +338,16 @@ section {
 .hero-card {
     position: absolute;
     right: 8%;
-    top: 50%;
+    top: 15%;
     transform: translateY(-50%);
-    background: rgba(255,255,255,0.04);
+    background: url(./rasm.jpg) no-repeat center / cover;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--border);
     border-radius: 20px;
     padding: 28px;
-    width: 280px;
+    width: 380px;
+    height: 500px;
     z-index: 2;
     animation: card-float 5s ease-in-out infinite, fade-up 0.6s 0.5s ease both;
 }
